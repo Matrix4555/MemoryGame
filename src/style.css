@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0 20px 0 0;
+}
+
+.card {
+    width: 75px;
+    height: 100px;
+    border: 1px solid tomato;
+
+    transition-duration: .3s;
+    transition-property: transform;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: 1px dashed blue;
+}
+
+.control_panel {
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.timer {
+    font-size: 30px;
+}
+
+.start_button {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+@media (max-width: 1260px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .deck {
+        padding: 0px;
+    }
+
+    .card {
+        width: 45px;
+        height: 60px;
+    }
+
+    .card-img {
+        width: 45px;
+        height: 60px;
+    }
+}
